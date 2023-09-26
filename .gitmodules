@@ -1,0 +1,3 @@
+[submodule "technical-backend"]
+	path = technical-backend
+	url = git@github.com:cjand225/technical-backend.git
