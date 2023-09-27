@@ -1,0 +1,21 @@
+version: '3'
+services:
+  # Next.js Frontend
+  frontend:
+    build:
+      context: ./technical-frontend
+      dockerfile: dockerfile
+    ports:
+      - "3000:3000"  # Map the container's port 3000 to the host's port 3000
+    environment:
+      - NODE_ENV=production  # Set the Node.js environment to development
+      
+  # FastAPI Backend
+  backend:
+    build:
+      context: ./technical-backend
+      dockerfile: dockerfile
+    ports:
+      - "8000:8000"  # Map the container's port 8000 to the host's port 8000
+    environment:
+      - FASTAPI_ENV=development  # Set an environment variable for FastAPI, if needed
