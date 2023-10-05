@@ -1,0 +1,6 @@
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:cjand225/currency-exchange-rate-frontend.git
+[submodule "backend"]
+	path = backend
+	url = git@github.com:cjand225/currency-exchange-rate-backend.git
