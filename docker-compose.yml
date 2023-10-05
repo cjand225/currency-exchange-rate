@@ -3,7 +3,7 @@ services:
   # Next.js Frontend
   frontend:
     build:
-      context: ./technical-frontend
+      context: ./frontend
       dockerfile: dockerfile
     ports:
       - "3000:3000"  # Map the container's port 3000 to the host's port 3000
@@ -13,7 +13,7 @@ services:
   # FastAPI Backend
   backend:
     build:
-      context: ./technical-backend
+      context: ./backend
       dockerfile: dockerfile
     ports:
       - "8000:8000"  # Map the container's port 8000 to the host's port 8000
