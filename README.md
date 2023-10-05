@@ -15,15 +15,18 @@ The applications are containerized using Docker, and Docker Compose is used to m
 ```
 Project Root
 │
-├── technical-backend # Backend API directory
+├── backend # Backend API directory
 │ ├── Dockerfile # Dockerfile for building the backend image
 │ └── ... # backend files and directories
 │
-├── technical-frontend # Frontend application directory
+├── frontend # Frontend application directory
 │ ├── Dockerfile # Dockerfile for building the frontend image
 │ └── ... # frontend files and directories
 │
 └── docker-compose.yml # Docker Compose configuration file
+│
+└── makefile # file for automating docker-compose commands
+
 ```
 
 ## Setup and Running the Application
