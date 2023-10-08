@@ -9,7 +9,12 @@ services:
       - "3000:3000"  # Map the container's port 3000 to the host's port 3000
     environment:
       - NODE_ENV=production  # Set the Node.js environment to development
-      
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
   # FastAPI Backend
   backend:
     build:
@@ -19,3 +24,8 @@ services:
       - "8000:8000"  # Map the container's port 8000 to the host's port 8000
     environment:
       - FASTAPI_ENV=development  # Set an environment variable for FastAPI, if needed
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
